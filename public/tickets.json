@@ -1,0 +1,93 @@
+[
+  {
+    "id": "TCK-001",
+    "title": "Login Issues - Can't Access Account",
+    "description": "Customer is unable to log in after multiple attempts. Password reset link is not working.",
+    "customer": "Rahim Uddin",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "3/1/2026"
+  },
+  {
+    "id": "TCK-002",
+    "title": "Payment Failed but Money Deducted",
+    "description": "Customer reports payment was deducted but order confirmation was not received.",
+    "customer": "Nusrat Jahan",
+    "priority": "High",
+    "status": "open",
+    "createdAt": "3/1/2026"
+  },
+  {
+    "id": "TCK-003",
+    "title": "Unable to Update Profile",
+    "description": "Customer cannot update profile information. Save button is not responding.",
+    "customer": "Tanvir Ahmed",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "3/2/2026"
+  },
+  {
+    "id": "TCK-004",
+    "title": "Order Not Delivered",
+    "description": "Customer has not received their order even after the expected delivery date.",
+    "customer": "Sabbir Hossain",
+    "priority": "High",
+    "status": "Pending",
+    "createdAt": "3/2/2026"
+  },
+  {
+    "id": "TCK-005",
+    "title": "App Crashing on Startup",
+    "description": "Customer reports that the mobile app crashes immediately after opening.",
+    "customer": "Mim Akter",
+    "priority": "Critical",
+    "status": "Open",
+    "createdAt": "3/2/2026"
+  },
+  {
+    "id": "TCK-006",
+    "title": "Incorrect Billing Amount",
+    "description": "Customer was charged twice for the same subscription plan.",
+    "customer": "Arif Khan",
+    "priority": "High",
+    "status": "open",
+    "createdAt": "3/3/2026"
+  },
+  {
+    "id": "TCK-007",
+    "title": "Feature Request - Dark Mode",
+    "description": "Customer requested a dark mode feature for better night usability.",
+    "customer": "Jannatul Ferdous",
+    "priority": "Low",
+    "status": "Open",
+    "createdAt": "3/3/2026"
+  },
+  {
+    "id": "TCK-008",
+    "title": "Email Notifications Not Working",
+    "description": "Customer is not receiving any email notifications from the system.",
+    "customer": "Mahadi Hasan",
+    "priority": "Medium",
+    "status": "Pending",
+    "createdAt": "3/3/2026"
+  },
+  {
+    "id": "TCK-009",
+    "title": "Unable to Upload Documents",
+    "description": "Customer cannot upload required documents. Upload button shows error.",
+    "customer": "Sharmin Sultana",
+    "priority": "High",
+    "status": "Open",
+    "createdAt": "3/4/2026"
+  },
+  {
+    "id": "TCK-010",
+    "title": "Refund Not Processed",
+    "description": "Customer requested a refund 7 days ago but has not received any update.",
+    "customer": "Imran Hossain",
+    "priority": "High",
+    "status": "Pending",
+    "createdAt": "3/4/2026"
+  }
+  
+]
