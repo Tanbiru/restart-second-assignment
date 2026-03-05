@@ -5,7 +5,7 @@ const Navbar = () => {
         <section className=' bg-base-100 shadow-sm'>
      <div className="navbar  justify-between px-6 w-10/12 mx-auto">
   <div>
-    <h3 className="text-2xl font-bold text-[#130B2D]">
+    <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-[#130B2D]">
       CS — Ticket System
     </h3>
   </div>

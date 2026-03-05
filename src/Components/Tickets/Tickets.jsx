@@ -91,7 +91,7 @@ const Tickets = ({ ticketPromise, onTicketSelect, onTicketComplete }) => {
         theme="light"
       />
       
-      <div className="mt-10 w-10/12 mx-auto flex justify-around">
+      <div className="mt-10 w-10/12 mx-auto flex flex-col lg:flex-row lg:justify-around gap-10">
 
 
 
@@ -99,10 +99,10 @@ const Tickets = ({ ticketPromise, onTicketSelect, onTicketComplete }) => {
 
 
 
-        <div>
+        <div className="order-2 lg:order-1">
           <h3 className='text-2xl font-semibold text-[#34485A] pb-5'>Customer Tickets</h3>
 
-          <div className='grid grid-cols-2 pb-32 gap-5'>
+          <div className='grid grid-cols-1 lg:grid-cols-2 pb-32 gap-5'>
             {
               ticketData.map(ticket => {
                 const statusColor =
@@ -119,7 +119,7 @@ const Tickets = ({ ticketPromise, onTicketSelect, onTicketComplete }) => {
 
                 return (
                   <div key={ticket.id}>
-                    <div className="w-lg">
+                    <div className="w-full">
                       <a
                         href="#"
                         onClick={(e) => handleTicketClick(ticket, e)}
@@ -152,7 +152,7 @@ const Tickets = ({ ticketPromise, onTicketSelect, onTicketComplete }) => {
 
                           <div className="flex items-center gap-4 text-gray-500">
                             <span>{ticket.customer}</span>
-                            <span className="flex items-center gap-1">
+                            <span className="flex items-center gap-1"><i class="fa-regular fa-calendar"></i>
                               {ticket.createdAt}
                             </span>
                           </div>
@@ -168,14 +168,14 @@ const Tickets = ({ ticketPromise, onTicketSelect, onTicketComplete }) => {
 
         {/* Task status section*/}
 
-        
-        <div>
+
+        <div className="order-1 lg:order-2">
           <h3 className='text-2xl font-semibold text-[#34485A] pb-5'>Task Status</h3>
 
           <div className=''>
             {selectedTickets.length > 0 ? (
               selectedTickets.map(ticket => (
-                <div key={ticket.id} className="card w-96 bg-base-100 card-sm shadow-sm mb-5">
+                <div key={ticket.id} className="card w-full bg-base-100 card-sm shadow-sm mb-5">
                   <div className="card-body items-center">
                     <h2 className="card-title">{ticket.title}</h2>
                     <button 
