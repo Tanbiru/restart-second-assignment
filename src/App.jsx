@@ -1,62 +1,64 @@
 
 
+
 import "./App.css";
 import Banner from "./Components/Banner/Banner";
 import Footer from "./Components/Footer/Footer";
 import Tickets from "./Components/Tickets/Tickets";
 import Navbar from "./Components/Navbar/Navbar";
-import { Suspense, useState } from "react";
-
-const fetchTickets = async () => {
-  const res = await fetch("/tickets.json");
-  return res.json();
-};
+import { useState, useEffect } from "react";
 
 function App() {
-  const ticketPromise = fetchTickets();
-  
-  
-  const [inProgress, setInProgress] = useState(0);
-  const [resolved, setResolved] = useState(0);
 
-  
-  const handleTicketSelect = () => {
-    setInProgress(prev => prev + 1);
-  };
+const [tickets, setTickets] = useState([]);
+const [inProgress, setInProgress] = useState(0);
+const [resolved, setResolved] = useState(0);
 
 
-  const handleTicketComplete = () => {
-    setInProgress(prev => prev - 1);
-    setResolved(prev => prev + 1);
-  };
+useEffect(() => {
+fetch("/tickets.json")
+.then((res) => res.json())
+.then((data) => {
+setTickets(data);
+})
+.catch((err) => {
+console.error("Failed to load tickets:", err);
+});
+}, []);
 
-  return (
-    <>
-      {/* Navbar section */}
-      <Navbar/>
+const handleTicketSelect = () => {
+setInProgress((prev) => prev + 1);
+};
 
-      {/* Banner section */}
+const handleTicketComplete = () => {
+setInProgress((prev) => prev - 1);
+setResolved((prev) => prev + 1);
+};
 
-      <Banner 
-        inProgress={inProgress} 
-        resolved={resolved} 
-      />
+return (
+<>
+{/* Navbar */} 
+<Navbar />
 
-     
+  {/* Banner */}
+  <Banner 
+    inProgress={inProgress} 
+    resolved={resolved} 
+  />
 
-      {/* Main section */}
-     
-        <Tickets 
-          ticketPromise={ticketPromise}
-          onTicketSelect={handleTicketSelect}
-          onTicketComplete={handleTicketComplete}
-        />
-     
+  {/* Tickets */}
+  <Tickets
+    ticketData={tickets}
+    onTicketSelect={handleTicketSelect}
+    onTicketComplete={handleTicketComplete}
+  />
 
-      {/* Footer section */}
-      <Footer/>
-    </>
-  );
+  {/* Footer */}
+  <Footer />
+</>
+
+
+);
 }
 
 export default App;
