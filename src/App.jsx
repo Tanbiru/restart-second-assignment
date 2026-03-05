@@ -8,7 +8,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import { Suspense, useState } from "react";
 
 const fetchTickets = async () => {
-  const res = await fetch("/public/tickets.json");
+  const res = await fetch("/tickets.json");
   return res.json();
 };
 

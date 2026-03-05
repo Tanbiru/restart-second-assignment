@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy:surge": "npm run build && cp dist/index.html dist/200.html && surge dist https://restart-second-assignment-634663722662.surge.sh"
+
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.1",
