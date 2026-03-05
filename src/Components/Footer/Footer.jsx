@@ -39,10 +39,10 @@ const Footer = () => {
          <div className='space-y-5'>
             <h3 className='text-xl font-bold'>Social Links</h3>
             <ul className='text-sm text-[#A1A1AA]'>
-                <li className='py-3'>@CS — Ticket System</li>
-                <li className='py-3'>@CS — Ticket System</li>
-                <li className='py-3'>@CS — Ticket System</li>
-                <li className='py-3'>support@cst.com</li>
+                <li className='py-3'><i class="fa-brands fa-x-twitter"></i> @CS — Ticket System</li>
+                <li className='py-3'><i class="fa-brands fa-linkedin"></i> @CS — Ticket System</li>
+                <li className='py-3'><i class="fa-brands fa-square-facebook"></i> @CS — Ticket System</li>
+                <li className='py-3'><i class="fa-regular fa-envelope"></i> support@cst.com</li>
             </ul>
          </div>
          </div>

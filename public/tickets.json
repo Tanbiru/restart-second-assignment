@@ -14,7 +14,7 @@
     "description": "Customer reports payment was deducted but order confirmation was not received.",
     "customer": "Nusrat Jahan",
     "priority": "High",
-    "status": "open",
+    "status": "Open",
     "createdAt": "3/1/2026"
   },
   {
@@ -40,7 +40,7 @@
     "title": "App Crashing on Startup",
     "description": "Customer reports that the mobile app crashes immediately after opening.",
     "customer": "Mim Akter",
-    "priority": "Critical",
+    "priority": "Low",
     "status": "Open",
     "createdAt": "3/2/2026"
   },
@@ -50,7 +50,7 @@
     "description": "Customer was charged twice for the same subscription plan.",
     "customer": "Arif Khan",
     "priority": "High",
-    "status": "open",
+    "status": "Open",
     "createdAt": "3/3/2026"
   },
   {
